@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./app.component.less']
 })
   export class AppComponent implements OnInit{
-  title = 'nice';
+  title = 'BWR';
 
   constructor() {
   }
