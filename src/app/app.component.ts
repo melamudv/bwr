@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.less']
 })
-export class AppComponent {
-  title = 'bwr';
+  export class AppComponent implements OnInit{
+  title = 'nice';
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+
+
+  }
+
 }

@@ -1,0 +1,31 @@
+<p-carousel #basicCarousel [value]="questions" [numVisible]="1" [numScroll]="1" [circular]="false"
+            [showIndicators]="false" [showNavigators]="false">
+  <ng-template pTemplate="header">
+    <h5 class="p-text-center">Timer: {{timeLeft}} sec</h5>
+    <p-progressBar [value]="calculateProgress(timeLeft)"></p-progressBar>
+    <p class="p-text-center">Progress to next question</p>
+  </ng-template>
+  <ng-template ngFor let-i="index"  let-question pTemplate="item" class="p-grid">
+    <h5 class="p-align-center">Level: {{question.difficulty}}</h5>
+    <h4>Category: {{question.category}}</h4>
+    <span class="red-text">Correct Answer for debbug:{{question.correct_answer}}</span>
+    <div class="product-item">
+      <div class="product-item-content">
+        <div class="p-mb-3">
+        </div>
+        <div class="p-col-align-center p-col-align-center">
+          <h2 class="p-align-center">{{question.question | replace }}</h2>
+          <div class="p-grid p-mt-2">
+            <div
+              class="p-col"
+              *ngFor="let answers of question.all_answers; let i=index"
+              [@animation]="'visible'"
+            >
+              <button pButton pRipple type="button" [label]="answers.answer | replace " (click)="nextQuestion(question, answers.answer)" class="p-button-secondary box box_color"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-carousel>

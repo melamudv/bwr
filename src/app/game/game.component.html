@@ -1,0 +1,13 @@
+<div class="p-grid p-jc-center  p-align-center">
+  <div class="p-col-12 p-align-center box">
+    <h1>Gamer: {{user}}</h1>
+    <h1>Question N:{{answersLength}}</h1>
+  </div>
+  <div class="p-col-8">
+   <app-carousel [questions]="questions$ | async" [answersLength]="answersLength" (answer)="addAnswer($event)" (toast)="onToast($event)"></app-carousel>
+  </div>
+  <p-toast position="bottom-center" key="bc"></p-toast>
+</div>
+
+
+

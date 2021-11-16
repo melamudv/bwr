@@ -1,0 +1,10 @@
+<div class="p-grid p-jc-center  p-align-center">
+  <div class="p-col-6">
+    <h1 class="p-col-12 p-align-center box pi-align-center center">Hello {{name}}</h1>
+    <span *ngFor="let answer of answers$ | async; let i = index">
+      <button *ngIf="answer.answer" pButton type="button" label="Correct" icon="pi pi-check" class="p-button-success margin-button" [pTooltip]=replaceText(item[i].question)></button>
+      <button *ngIf="!answer.answer" pButton type="button" label="Incorrect" icon="pi pi-times" class="p-button-danger margin-button" [pTooltip]=replaceText(item[i].question)></button>
+    </span>
+    <h1 class="p-col-12 p-align-center box pi-align-center center">Your percent Correct Answers is: {{(countTrue*100)/20}}%</h1>
+  </div>
+</div>
