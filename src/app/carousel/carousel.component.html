@@ -8,7 +8,6 @@
   <ng-template ngFor let-i="index"  let-question pTemplate="item" class="p-grid">
     <h5 class="p-align-center">Level: {{question.difficulty}}</h5>
     <h4>Category: {{question.category}}</h4>
-    <span class="red-text">Correct Answer for debbug:{{question.correct_answer}}</span>
     <div class="product-item">
       <div class="product-item-content">
         <div class="p-mb-3">
@@ -24,6 +23,7 @@
               <button pButton pRipple type="button" [label]="answers.answer | replace " (click)="nextQuestion(question, answers.answer)" class="p-button-secondary box box_color"></button>
             </div>
           </div>
+          <span class="red-text-small">Correct Answer for debbug:{{question.correct_answer}}</span>
         </div>
       </div>
     </div>

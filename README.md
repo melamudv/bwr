@@ -1,4 +1,4 @@
-# Bwr
+# BWR - quiz games
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
 
@@ -14,14 +14,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Library primeng (https://www.primefaces.org)
+
+## App Flow
+3 page (credential, game, result).
+game and result page under AuthGuard you need enter name in first page other you can't enter to 2 other pages.
+
+## Store Flow
+<img width="826" alt="Screen Shot 2021-10-30 at 20 47 30" src="https://user-images.githubusercontent.com/947730/139555803-dd44819a-149b-45f9-b450-dacb0039bdb0.png">
+
